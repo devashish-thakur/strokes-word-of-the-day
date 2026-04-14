@@ -4,10 +4,10 @@
 
 ### Step 1: Install the System
 
-Copy and paste this **single command** into Terminal to install Word of the Day:
+Copy and paste this **single command** into Terminal to install Word of the Day (works for fresh install **and** reinstall):
 
 ```bash
-cd ~ && git clone https://github.com/devashish-thakur/strokes-word-of-the-day.git strokes-wotd && cd strokes-wotd && chmod +x install.sh && ./install.sh
+rm -rf ~/strokes-wotd && cd ~ && git clone https://github.com/devashish-thakur/strokes-word-of-the-day.git strokes-wotd && cd strokes-wotd && chmod +x install.sh && ./install.sh
 ```
 
 The system will:

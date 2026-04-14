@@ -2,16 +2,17 @@
 
 ###############################################################################
 # Word of the Day - One-Command Installation
-# 
+#
 # This script installs and starts the Word of the Day system as a background
-# LaunchAgent that runs indefinitely, automatically showing a word when your
-# Mac wakes from sleep.
+# LaunchAgent that runs indefinitely, automatically showing a word in your
+# browser when your Mac wakes from sleep.
+#
+# Works on any Mac - no hardcoded paths.
 ###############################################################################
 
-set -e  # Exit on error
-
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PLIST_FILE="com.wordoftheday.wake.plist"
+PLIST_LABEL="com.wordoftheday.wake"
+PLIST_FILE="${PLIST_LABEL}.plist"
 LAUNCH_AGENT_DIR="$HOME/Library/LaunchAgents"
 LAUNCH_AGENT_PATH="$LAUNCH_AGENT_DIR/$PLIST_FILE"
 
@@ -20,101 +21,178 @@ echo "║     Word of the Day - One-Command Installation & Startup        ║"
 echo "╚══════════════════════════════════════════════════════════════════╝"
 echo ""
 
-# Step 1: Verify files exist
+# ─── Step 1: Clean up any existing installation ──────────────────────────────
+echo "→ Cleaning up any existing installation..."
+launchctl unload "$LAUNCH_AGENT_PATH" 2>/dev/null || true
+rm -f "$LAUNCH_AGENT_PATH"
+rm -f /tmp/wordoftheday.lock
+echo "✓ Clean slate ready"
+
+# ─── Step 2: Detect Python 3 ─────────────────────────────────────────────────
+echo "→ Detecting Python 3..."
+
+PYTHON_BIN=""
+
+# Priority order: system python3, homebrew, pyenv, fallback
+for candidate in /usr/bin/python3 /usr/local/bin/python3 /opt/homebrew/bin/python3; do
+    if [ -f "$candidate" ]; then
+        PYTHON_BIN="$candidate"
+        break
+    fi
+done
+
+# Last resort: whatever is on PATH
+if [ -z "$PYTHON_BIN" ]; then
+    if command -v python3 &>/dev/null; then
+        PYTHON_BIN="$(command -v python3)"
+    fi
+fi
+
+if [ -z "$PYTHON_BIN" ]; then
+    echo "✗ Error: Python 3 not found."
+    echo "  Install it from https://www.python.org or via Homebrew: brew install python"
+    exit 1
+fi
+
+PYTHON_VERSION=$("$PYTHON_BIN" --version 2>&1)
+echo "✓ Python found: $PYTHON_VERSION at $PYTHON_BIN"
+
+# ─── Step 3: Verify required files ───────────────────────────────────────────
 echo "→ Verifying installation files..."
-if [ ! -f "$SCRIPT_DIR/setup/$PLIST_FILE" ]; then
-    echo "✗ Error: setup/$PLIST_FILE not found"
-    exit 1
-fi
 
-if [ ! -f "$SCRIPT_DIR/launch_word_of_day.sh" ]; then
-    echo "✗ Error: launch_word_of_day.sh not found"
-    exit 1
-fi
+REQUIRED_FILES=(
+    "launch_word_of_day.sh"
+    "main_html.py"
+    "generate_html.py"
+    "wake_daemon.py"
+    "data_loader.py"
+    "state_manager.py"
+    "word_selector.py"
+    "words.json"
+)
 
-if [ ! -f "$SCRIPT_DIR/main_html.py" ]; then
-    echo "✗ Error: main_html.py not found"
-    exit 1
-fi
+ALL_PRESENT=true
+for file in "${REQUIRED_FILES[@]}"; do
+    if [ ! -f "$SCRIPT_DIR/$file" ]; then
+        echo "✗ Error: $file not found"
+        ALL_PRESENT=false
+    fi
+done
 
-if [ ! -f "$SCRIPT_DIR/generate_html.py" ]; then
-    echo "✗ Error: generate_html.py not found"
+if [ "$ALL_PRESENT" = false ]; then
+    echo "✗ Some required files are missing. Re-clone the repository."
     exit 1
 fi
 
 echo "✓ All required files present"
 
-# Step 2: Ensure scripts are executable
+# ─── Step 4: Set executable permissions ──────────────────────────────────────
 echo "→ Setting executable permissions..."
 chmod +x "$SCRIPT_DIR/launch_word_of_day.sh"
 chmod +x "$SCRIPT_DIR/main_html.py"
 chmod +x "$SCRIPT_DIR/wake_daemon.py"
+chmod +x "$SCRIPT_DIR/check_permissions.sh"
 chmod +x "$SCRIPT_DIR/install.sh"
 echo "✓ Permissions set"
 
-# Step 3: Unload existing LaunchAgent if present
-if [ -f "$LAUNCH_AGENT_PATH" ]; then
-    echo "→ Unloading existing LaunchAgent..."
-    launchctl unload "$LAUNCH_AGENT_PATH" 2>/dev/null || true
-    echo "✓ Existing LaunchAgent unloaded"
+# ─── Step 5: Test Python works ───────────────────────────────────────────────
+echo "→ Testing Python and word generator..."
+cd "$SCRIPT_DIR"
+if "$PYTHON_BIN" main_html.py > /tmp/wordoftheday_install_test.log 2>&1; then
+    echo "✓ Word generator works - HTML created successfully"
+else
+    echo "✗ Python test failed. Error:"
+    cat /tmp/wordoftheday_install_test.log
+    exit 1
 fi
 
-# Step 4: Copy LaunchAgent plist
-echo "→ Installing LaunchAgent..."
+# ─── Step 6: Generate plist with correct paths for THIS machine ──────────────
+echo "→ Generating LaunchAgent configuration..."
 mkdir -p "$LAUNCH_AGENT_DIR"
-cp "$SCRIPT_DIR/setup/$PLIST_FILE" "$LAUNCH_AGENT_PATH"
-echo "✓ LaunchAgent installed to $LAUNCH_AGENT_PATH"
 
-# Step 5: Load LaunchAgent
-echo "→ Starting LaunchAgent (will run in background indefinitely)..."
+cat > "$LAUNCH_AGENT_PATH" << PLIST_EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>${PLIST_LABEL}</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>${PYTHON_BIN}</string>
+        <string>${SCRIPT_DIR}/wake_daemon.py</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/wordoftheday_stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/tmp/wordoftheday_stderr.log</string>
+
+    <key>ProcessType</key>
+    <string>Background</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/bin:/bin:/usr/local/bin:/opt/homebrew/bin:/usr/sbin:/sbin</string>
+        <key>HOME</key>
+        <string>${HOME}</string>
+    </dict>
+</dict>
+</plist>
+PLIST_EOF
+
+echo "✓ LaunchAgent plist generated at $LAUNCH_AGENT_PATH"
+
+# ─── Step 7: Load the LaunchAgent ────────────────────────────────────────────
+echo "→ Loading LaunchAgent..."
 launchctl load "$LAUNCH_AGENT_PATH"
-echo "✓ LaunchAgent loaded and running"
+echo "✓ LaunchAgent loaded"
 
-# Step 6: Verify it's running
-sleep 1
-if launchctl list | grep -q "com.wordoftheday.wake"; then
+# ─── Step 8: Verify it's running ─────────────────────────────────────────────
+sleep 2
+if launchctl list | grep -q "$PLIST_LABEL"; then
     echo "✓ LaunchAgent verified running"
 else
-    echo "⚠ Warning: LaunchAgent may not be running. Check status with:"
-    echo "  launchctl list | grep wordoftheday"
+    echo "⚠ Warning: LaunchAgent may not be running yet."
+    echo "  Check: launchctl list | grep wordoftheday"
 fi
 
+# ─── Done ────────────────────────────────────────────────────────────────────
 echo ""
 echo "╔══════════════════════════════════════════════════════════════════╗"
 echo "║                    ✅ INSTALLATION COMPLETE                      ║"
 echo "╚══════════════════════════════════════════════════════════════════╝"
 echo ""
-echo "📋 System Status:"
-echo "   • LaunchAgent:  Running in background"
-echo "   • Trigger:      Mac wake from sleep + every 5 minutes"
-echo "   • Persistence:  Will restart on reboot"
+echo "📋 Install Location:  $SCRIPT_DIR"
+echo "🐍 Python Used:       $PYTHON_BIN"
 echo ""
-echo "🧪 Test Now:"
-echo "   ./launch_word_of_day.sh"
+echo "🧪 Test it now:"
+echo "   $SCRIPT_DIR/launch_word_of_day.sh"
 echo ""
-echo "📊 Check Permissions & Status:"
-echo "   ./check_permissions.sh"
+echo "📊 Run diagnostics:"
+echo "   $SCRIPT_DIR/check_permissions.sh"
 echo ""
-echo "🔍 Or Check Daemon Status:"
-echo "   launchctl list | grep wordoftheday"
-echo ""
-echo "📝 View Logs:"
+echo "📝 View logs:"
 echo "   tail -f /tmp/wordoftheday.log"
+echo "   tail -f /tmp/wordoftheday_wake_daemon.log"
 echo ""
-echo "🛑 To Uninstall:"
-echo "   launchctl unload ~/Library/LaunchAgents/$PLIST_FILE"
-echo "   rm ~/Library/LaunchAgents/$PLIST_FILE"
+echo "🛑 To uninstall:"
+echo "   launchctl unload $LAUNCH_AGENT_PATH"
+echo "   rm $LAUNCH_AGENT_PATH"
 echo ""
-echo "✨ The system is now running! Close your laptop lid, wait 30 seconds,"
-echo "   then open it to see your Word of the Day in your browser! 🎉"
+echo "⚠️  GRANT PERMISSIONS (required for wake detection):"
+echo "   System Settings → Privacy & Security → Full Disk Access"
+echo "   → Click + and add Terminal.app → Toggle ON"
 echo ""
-echo "⚠️  IMPORTANT: Grant Permissions"
-echo "   macOS may prompt you for permissions when the system first runs."
-echo "   Click 'Allow' or 'OK' on any permission dialogs."
-echo ""
-echo "   If needed, manually grant these in System Settings > Privacy & Security:"
-echo "   • Full Disk Access → Terminal.app (ON)"
-echo "   • Automation → Terminal → [Your Browser] (ON)"
-echo ""
-echo "   After granting permissions, restart Terminal completely."
+echo "✨ Close your laptop lid, wait 30 seconds, open it -"
+echo "   your browser will show the Word of the Day! 🎉"
 echo ""
