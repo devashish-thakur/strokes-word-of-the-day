@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Label: Unique identifier for this LaunchAgent -->
+    <key>Label</key>
+    <string>com.wordoftheday.wake</string>
+    
+    <!-- Program: The Python wake daemon that monitors for actual wake events -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/Users/devashish.thakur/strokes/wake_daemon.py</string>
+    </array>
+    
+    <!-- Run at Load: Start the daemon when agent loads -->
+    <key>RunAtLoad</key>
+    <true/>
+    
+    <!-- Keep Alive: Keep the daemon running continuously -->
+    <key>KeepAlive</key>
+    <true/>
+    
+    <!-- Standard Output: Log output for debugging -->
+    <key>StandardOutPath</key>
+    <string>/tmp/wordoftheday_stdout.log</string>
+    
+    <!-- Standard Error: Log errors for debugging -->
+    <key>StandardErrorPath</key>
+    <string>/tmp/wordoftheday_stderr.log</string>
+    
+    <!-- Process Type: Background process -->
+    <key>ProcessType</key>
+    <string>Background</string>
+    
+    <!-- Environment Variables: Ensure PATH is set -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/bin:/bin:/usr/local/bin:/usr/sbin:/sbin</string>
+    </dict>
+    
+    <!-- Nice: Lower priority to not interfere with system -->
+    <key>Nice</key>
+    <integer>5</integer>
+</dict>
+</plist>

@@ -1,0 +1,777 @@
+[
+  {
+    "word": "ephemeral",
+    "pronunciation": "ih-FEM-er-uhl",
+    "part_of_speech": "adjective",
+    "meaning": "Lasting for a very short time; transient or fleeting",
+    "examples": {
+      "casual": "That viral meme was totally ephemeral—everyone forgot about it in a week.",
+      "formal": "The ephemeral nature of success demands constant adaptation and renewal.",
+      "dramatic": "Like morning dew on petals, her smile was ephemeral, vanishing before I could capture it."
+    },
+    "synonyms": ["fleeting", "transient", "momentary", "temporary", "short-lived"],
+    "antonyms": ["permanent", "eternal", "enduring", "lasting", "perpetual"],
+    "memory_hook": "Think 'ephemeral' sounds like 'temporary'—both describe things that don't last long.",
+    "common_mistake": "Don't confuse with 'ethereal' (delicate/heavenly). Ephemeral is about TIME, ethereal is about QUALITY.",
+    "root": "Greek 'ephemeros' meaning 'lasting only a day' (epi = upon + hemera = day)"
+  },
+  {
+    "word": "ubiquitous",
+    "pronunciation": "yoo-BIK-wi-tuhs",
+    "part_of_speech": "adjective",
+    "meaning": "Present, appearing, or found everywhere; omnipresent",
+    "examples": {
+      "casual": "Smartphones are ubiquitous now—even my grandma has one.",
+      "formal": "The ubiquitous presence of surveillance cameras raises privacy concerns.",
+      "dramatic": "Coffee shops became ubiquitous temples of the modern age, on every corner."
+    },
+    "synonyms": ["omnipresent", "pervasive", "widespread", "universal", "everywhere"],
+    "antonyms": ["rare", "scarce", "uncommon", "limited", "absent"],
+    "memory_hook": "Uber is ubiquitous—you can find Uber cars everywhere in cities!",
+    "common_mistake": "Don't misspell as 'ubiquitious' (no second 'i').",
+    "root": "Latin 'ubique' meaning 'everywhere' (ubi = where)"
+  },
+  {
+    "word": "serendipity",
+    "pronunciation": "ser-uhn-DIP-i-tee",
+    "part_of_speech": "noun",
+    "meaning": "The occurrence of events by chance in a happy or beneficial way; a fortunate accident",
+    "examples": {
+      "casual": "Running into my old friend at the airport was pure serendipity!",
+      "formal": "Scientific serendipity has led to discoveries from penicillin to Post-it notes.",
+      "dramatic": "In the vast chaos of the universe, their meeting was serendipity—two souls colliding."
+    },
+    "synonyms": ["chance", "fortune", "luck", "coincidence", "fortuity"],
+    "antonyms": ["misfortune", "bad luck", "design", "planning", "intention"],
+    "memory_hook": "Serendipity = 'serene' + 'dip' into good fortune. Dip into something peaceful and lucky!",
+    "common_mistake": "It's not just any coincidence—it must be a HAPPY or BENEFICIAL one.",
+    "root": "Coined by Horace Walpole in 1754, from the Persian fairy tale 'The Three Princes of Serendip'"
+  },
+  {
+    "word": "eloquent",
+    "pronunciation": "EL-uh-kwuhnt",
+    "part_of_speech": "adjective",
+    "meaning": "Fluent or persuasive in speaking or writing; clearly expressing or indicating something",
+    "examples": {
+      "casual": "Her speech was so eloquent, everyone was moved to tears.",
+      "formal": "The attorney's eloquent argument swayed the jury's opinion decisively.",
+      "dramatic": "With eloquent fury, the poet's words became weapons against injustice."
+    },
+    "synonyms": ["articulate", "expressive", "fluent", "persuasive", "silver-tongued"],
+    "antonyms": ["inarticulate", "halting", "hesitant", "tongue-tied", "ineloquent"],
+    "memory_hook": "Eloquent speakers have 'elegant' words flowing out smoothly.",
+    "common_mistake": "Remember the 'e' at the start—not 'iloquent'.",
+    "root": "Latin 'eloquens' from 'eloqui' (e = out + loqui = speak)"
+  },
+  {
+    "word": "pragmatic",
+    "pronunciation": "prag-MAT-ik",
+    "part_of_speech": "adjective",
+    "meaning": "Dealing with things sensibly and realistically; practical rather than idealistic",
+    "examples": {
+      "casual": "Let's be pragmatic—we can't afford that vacation right now.",
+      "formal": "A pragmatic approach to policy-making considers real-world constraints and outcomes.",
+      "dramatic": "Torn between dreams and duty, she chose the pragmatic path, though it broke her heart."
+    },
+    "synonyms": ["practical", "realistic", "sensible", "down-to-earth", "matter-of-fact"],
+    "antonyms": ["idealistic", "impractical", "unrealistic", "theoretical", "romantic"],
+    "memory_hook": "Pragmatic = 'practical magic'—the magic of being realistic!",
+    "root": "Greek 'pragma' meaning 'deed' or 'act' (things done, not just ideas)"
+  },
+  {
+    "word": "melancholy",
+    "pronunciation": "MEL-uhn-kol-ee",
+    "part_of_speech": "noun/adjective",
+    "meaning": "A deep, pensive sadness; a feeling of thoughtful sadness",
+    "examples": {
+      "casual": "Rainy days always give me a sense of melancholy.",
+      "formal": "The melancholy tone of the composition reflects the composer's personal losses.",
+      "dramatic": "A melancholy moon hung over the abandoned house, weeping silver tears."
+    },
+    "synonyms": ["sadness", "gloom", "dejection", "wistfulness", "sorrow"],
+    "antonyms": ["joy", "cheerfulness", "happiness", "elation", "merriment"],
+    "memory_hook": "Melon + Collie: Imagine a sad collie dog crying over a dropped melon.",
+    "common_mistake": "It's not just sadness—it includes PENSIVENESS and thoughtfulness.",
+    "root": "Greek 'melas' (black) + 'khole' (bile)—ancient medicine believed black bile caused sadness"
+  },
+  {
+    "word": "ambivalent",
+    "pronunciation": "am-BIV-uh-luhnt",
+    "part_of_speech": "adjective",
+    "meaning": "Having mixed feelings or contradictory ideas about something or someone",
+    "examples": {
+      "casual": "I'm ambivalent about the new job—it pays more but the commute is terrible.",
+      "formal": "Public opinion remains ambivalent regarding the proposed legislation.",
+      "dramatic": "She stood at the crossroads, ambivalent, one path leading to love, the other to freedom."
+    },
+    "synonyms": ["uncertain", "conflicted", "undecided", "torn", "equivocal"],
+    "antonyms": ["certain", "sure", "decided", "resolute", "unequivocal"],
+    "memory_hook": "Ambi (both) + valent (values) = valuing BOTH sides, can't decide!",
+    "common_mistake": "Don't confuse with 'indifferent' (not caring). Ambivalent means caring about BOTH sides.",
+    "root": "Latin 'ambi' (both) + 'valentia' (strength)—having strength pulling both ways"
+  },
+  {
+    "word": "tenacious",
+    "pronunciation": "tuh-NAY-shuhs",
+    "part_of_speech": "adjective",
+    "meaning": "Holding firmly; persistent in maintaining, adhering to, or seeking something valued",
+    "examples": {
+      "casual": "She's tenacious—she never gives up on her goals, no matter what.",
+      "formal": "The researcher's tenacious pursuit of truth led to a groundbreaking discovery.",
+      "dramatic": "Like a wolf gripping its prey, his tenacious will refused to surrender to defeat."
+    },
+    "synonyms": ["persistent", "determined", "resolute", "stubborn", "dogged"],
+    "antonyms": ["yielding", "weak", "irresolute", "surrendering", "feeble"],
+    "memory_hook": "Ten-ACHE-ious: Even with ten aches, you keep going—that's tenacious!",
+    "root": "Latin 'tenax' from 'tenere' (to hold)"
+  },
+  {
+    "word": "superfluous",
+    "pronunciation": "soo-PUR-floo-uhs",
+    "part_of_speech": "adjective",
+    "meaning": "Unnecessary, especially through being more than enough; exceeding what is sufficient",
+    "examples": {
+      "casual": "The instructions were superfluous—everyone already knew what to do.",
+      "formal": "The editor removed superfluous adjectives to strengthen the prose.",
+      "dramatic": "In the stark desert, every superfluous possession was abandoned, stripped to survival."
+    },
+    "synonyms": ["unnecessary", "redundant", "excessive", "surplus", "extra"],
+    "antonyms": ["necessary", "essential", "needed", "required", "insufficient"],
+    "memory_hook": "Super-FLU-ous: Like having SUPER flu symptoms—way more than needed!",
+    "common_mistake": "Don't misspell as 'superflous' (it has two 'u's).",
+    "root": "Latin 'superfluus' (super = over + fluere = to flow)—flowing over"
+  },
+  {
+    "word": "cryptic",
+    "pronunciation": "KRIP-tik",
+    "part_of_speech": "adjective",
+    "meaning": "Having a hidden or ambiguous meaning; mysterious and difficult to understand",
+    "examples": {
+      "casual": "His text was so cryptic, I had no idea what he meant.",
+      "formal": "The cryptic messages left by the suspect puzzled investigators for months.",
+      "dramatic": "Ancient cryptic symbols covered the tomb walls, whispering secrets to those who could decode them."
+    },
+    "synonyms": ["mysterious", "enigmatic", "obscure", "puzzling", "arcane"],
+    "antonyms": ["clear", "obvious", "plain", "straightforward", "explicit"],
+    "memory_hook": "Cryptic = Crypt (tomb) + ic: Tombs hide bodies, cryptic messages hide meanings!",
+    "root": "Greek 'kryptos' meaning 'hidden'"
+  },
+  {
+    "word": "juxtapose",
+    "pronunciation": "JUK-stuh-pohz",
+    "part_of_speech": "verb",
+    "meaning": "To place or deal with close together for contrasting effect",
+    "examples": {
+      "casual": "The designer juxtaposed bright colors with neutral tones to create contrast.",
+      "formal": "The documentary juxtaposes footage of wealth and poverty to highlight inequality.",
+      "dramatic": "Life and death were juxtaposed in the battlefield, separated by mere heartbeats."
+    },
+    "synonyms": ["contrast", "compare", "set side by side", "oppose", "parallel"],
+    "antonyms": ["separate", "divide", "isolate", "disconnect"],
+    "memory_hook": "Juxta (next to) + pose (position): Position things NEXT TO each other!",
+    "root": "French 'juxta' (beside) + 'poser' (to place)"
+  },
+  {
+    "word": "nefarious",
+    "pronunciation": "nih-FAIR-ee-uhs",
+    "part_of_speech": "adjective",
+    "meaning": "Wicked, villainous, or criminal; extremely bad or evil",
+    "examples": {
+      "casual": "The villain's nefarious plan involved stealing everyone's data.",
+      "formal": "The corporation's nefarious practices led to a massive regulatory investigation.",
+      "dramatic": "With nefarious glee, the antagonist watched his enemies fall into the trap."
+    },
+    "synonyms": ["wicked", "villainous", "evil", "heinous", "sinister"],
+    "antonyms": ["virtuous", "noble", "righteous", "good", "honorable"],
+    "memory_hook": "Nefarious = 'Unfair-ious'—someone who's unfairly and extremely evil!",
+    "root": "Latin 'nefarius' from 'nefas' (crime, sin)"
+  },
+  {
+    "word": "quintessential",
+    "pronunciation": "kwin-tuh-SEN-shuhl",
+    "part_of_speech": "adjective",
+    "meaning": "Representing the most perfect or typical example of a quality or class",
+    "examples": {
+      "casual": "Pizza is the quintessential comfort food for many people.",
+      "formal": "Shakespeare is considered the quintessential playwright of the English language.",
+      "dramatic": "She was the quintessential artist—passionate, tormented, and brilliantly alive."
+    },
+    "synonyms": ["typical", "archetypal", "ideal", "ultimate", "definitive"],
+    "antonyms": ["atypical", "unusual", "aberrant", "abnormal"],
+    "memory_hook": "Quint (five) + essential: The FIFTH element—the most ESSENTIAL pure form!",
+    "root": "Latin 'quinta essentia' (fifth essence)—the purest extract beyond earth, air, fire, water"
+  },
+  {
+    "word": "ostentatious",
+    "pronunciation": "os-ten-TAY-shuhs",
+    "part_of_speech": "adjective",
+    "meaning": "Characterized by vulgar or pretentious display; designed to impress or attract notice",
+    "examples": {
+      "casual": "His ostentatious watch screamed 'look at how rich I am!'",
+      "formal": "The billionaire's ostentatious lifestyle drew criticism during the economic crisis.",
+      "dramatic": "Gold dripped from every surface, an ostentatious monument to greed and vanity."
+    },
+    "synonyms": ["showy", "flashy", "pretentious", "gaudy", "flamboyant"],
+    "antonyms": ["modest", "understated", "humble", "plain", "simple"],
+    "memory_hook": "Ostentatious = 'Oh-STUN-tatious'—so showy it STUNS you!",
+    "root": "Latin 'ostentare' (to display)"
+  },
+  {
+    "word": "lucid",
+    "pronunciation": "LOO-sid",
+    "part_of_speech": "adjective",
+    "meaning": "Expressed clearly; easy to understand; showing clear thought or reasoning",
+    "examples": {
+      "casual": "Thanks for the lucid explanation—now I finally get it!",
+      "formal": "Despite his age, the professor maintained remarkably lucid thinking.",
+      "dramatic": "In a rare lucid moment, the fever broke and his eyes cleared with recognition."
+    },
+    "synonyms": ["clear", "intelligible", "coherent", "transparent", "comprehensible"],
+    "antonyms": ["confusing", "unclear", "muddled", "obscure", "vague"],
+    "memory_hook": "Lucid = 'Loose-id': Ideas flow loosely and clearly, not tangled up!",
+    "root": "Latin 'lucidus' from 'lux' (light)—full of light, therefore clear"
+  },
+  {
+    "word": "indignant",
+    "pronunciation": "in-DIG-nuhnt",
+    "part_of_speech": "adjective",
+    "meaning": "Feeling or showing anger because of something unjust, mean, or unworthy",
+    "examples": {
+      "casual": "She was indignant when someone cut in line ahead of her.",
+      "formal": "The citizens grew indignant over the government's failure to address their concerns.",
+      "dramatic": "With indignant fury blazing in his eyes, he denounced the false accusations."
+    },
+    "synonyms": ["outraged", "offended", "affronted", "resentful", "angry"],
+    "antonyms": ["pleased", "content", "satisfied", "happy", "accepting"],
+    "memory_hook": "In-DIG-nant = They dug into your dignity, making you angry!",
+    "root": "Latin 'indignari' (to regard as unworthy) from 'in' (not) + 'dignus' (worthy)"
+  },
+  {
+    "word": "verbose",
+    "pronunciation": "vur-BOHS",
+    "part_of_speech": "adjective",
+    "meaning": "Using or containing more words than needed; wordy",
+    "examples": {
+      "casual": "His emails are so verbose—he could say in 10 words what takes him 100.",
+      "formal": "The verbose document could be condensed to a third of its length without losing meaning.",
+      "dramatic": "The senator's verbose speech droned on for hours, a river of words drowning all substance."
+    },
+    "synonyms": ["wordy", "long-winded", "prolix", "rambling", "garrulous"],
+    "antonyms": ["concise", "brief", "succinct", "terse", "laconic"],
+    "memory_hook": "Verbose = 'VERB-ose': Too many VERBS and words, overly wordy!",
+    "root": "Latin 'verbosus' from 'verbum' (word)"
+  },
+  {
+    "word": "pernicious",
+    "pronunciation": "per-NISH-uhs",
+    "part_of_speech": "adjective",
+    "meaning": "Having a harmful effect, especially in a gradual or subtle way; insidiously destructive",
+    "examples": {
+      "casual": "Social media can have a pernicious effect on mental health if not used carefully.",
+      "formal": "The pernicious influence of corruption undermines democratic institutions.",
+      "dramatic": "Like poison slowly spreading through veins, the pernicious lies destroyed the community."
+    },
+    "synonyms": ["harmful", "destructive", "injurious", "detrimental", "noxious"],
+    "antonyms": ["beneficial", "helpful", "harmless", "benign", "advantageous"],
+    "memory_hook": "Pernicious = 'Per-vicious': Something SO vicious it's permanently harmful!",
+    "root": "Latin 'perniciosus' from 'pernicies' (destruction)"
+  },
+  {
+    "word": "ephemera",
+    "pronunciation": "ih-FEM-er-uh",
+    "part_of_speech": "noun",
+    "meaning": "Items designed to be useful or important for only a short time; things lasting a short time",
+    "examples": {
+      "casual": "Old concert tickets and receipts are ephemera that some people collect.",
+      "formal": "The museum's collection includes advertising ephemera from the 1950s.",
+      "dramatic": "Scattered on the floor were ephemera of a life—faded letters, torn tickets, forgotten dreams."
+    },
+    "synonyms": ["transient items", "memorabilia", "collectibles", "temporary things"],
+    "antonyms": ["permanent items", "lasting artifacts", "enduring objects"],
+    "memory_hook": "Related to 'ephemeral'—items that are temporary by design.",
+    "root": "Greek 'ephemeros' (lasting only a day)"
+  },
+  {
+    "word": "vicarious",
+    "pronunciation": "vy-KAIR-ee-uhs",
+    "part_of_speech": "adjective",
+    "meaning": "Experienced in the imagination through the feelings or actions of another person",
+    "examples": {
+      "casual": "I get vicarious thrills watching extreme sports videos on YouTube.",
+      "formal": "Reading provides vicarious experiences of lives we may never lead.",
+      "dramatic": "Through her daughter's success, she lived vicariously, tasting victories not her own."
+    },
+    "synonyms": ["indirect", "secondhand", "substituted", "surrogate", "empathetic"],
+    "antonyms": ["direct", "firsthand", "personal", "immediate"],
+    "memory_hook": "Vicarious = 'Vice-arious': Like a VICE president experiencing the president's role!",
+    "root": "Latin 'vicarius' (substitute) from 'vicis' (change, turn)"
+  },
+  {
+    "word": "sagacious",
+    "pronunciation": "suh-GAY-shuhs",
+    "part_of_speech": "adjective",
+    "meaning": "Having or showing keen mental discernment and good judgment; wise and shrewd",
+    "examples": {
+      "casual": "My grandma is sagacious—she always knows the right advice to give.",
+      "formal": "The CEO's sagacious decision to diversify saved the company during the recession.",
+      "dramatic": "With sagacious eyes that pierced through deception, the elder saw the truth all missed."
+    },
+    "synonyms": ["wise", "shrewd", "perceptive", "astute", "judicious"],
+    "antonyms": ["foolish", "unwise", "stupid", "naive", "imprudent"],
+    "memory_hook": "Sagacious = Sage (wise person) + acious: Acting like a wise sage!",
+    "root": "Latin 'sagax' from 'sagire' (to perceive keenly)"
+  },
+  {
+    "word": "anachronism",
+    "pronunciation": "uh-NAK-ruh-niz-uhm",
+    "part_of_speech": "noun",
+    "meaning": "Something that is out of its proper or chronological place; something belonging to a different time period",
+    "examples": {
+      "casual": "Using a typewriter in 2026 would be a total anachronism.",
+      "formal": "The film contained several anachronisms, including a wristwatch in a medieval scene.",
+      "dramatic": "He was an anachronism, a knight born in the age of computers, honor in a world of expediency."
+    },
+    "synonyms": ["archaism", "throwback", "misplacement", "historical error"],
+    "antonyms": ["contemporary item", "modern element", "current practice"],
+    "memory_hook": "Ana (backward) + chron (time) + ism: Something backward in time!",
+    "root": "Greek 'ana' (against/back) + 'chronos' (time)"
+  },
+  {
+    "word": "fastidious",
+    "pronunciation": "fa-STID-ee-uhs",
+    "part_of_speech": "adjective",
+    "meaning": "Very attentive to accuracy and detail; difficult to please; meticulous",
+    "examples": {
+      "casual": "She's fastidious about cleanliness—her apartment is always spotless.",
+      "formal": "The editor was fastidious in reviewing manuscripts for grammatical precision.",
+      "dramatic": "With fastidious care, the surgeon's hands moved, each cut perfectly measured."
+    },
+    "synonyms": ["meticulous", "particular", "finicky", "scrupulous", "demanding"],
+    "antonyms": ["careless", "sloppy", "negligent", "lax", "easygoing"],
+    "memory_hook": "Fast-TEDIOUS: Being so careful it's almost tediously slow and precise!",
+    "root": "Latin 'fastidiosus' (disdainful) from 'fastidium' (loathing)"
+  },
+  {
+    "word": "recalcitrant",
+    "pronunciation": "rih-KAL-si-truhnt",
+    "part_of_speech": "adjective",
+    "meaning": "Having an obstinately uncooperative attitude; stubbornly resistant to authority or control",
+    "examples": {
+      "casual": "My recalcitrant cat refuses to use the new litter box no matter what I try.",
+      "formal": "The recalcitrant student repeatedly defied school policies despite multiple warnings.",
+      "dramatic": "Like a recalcitrant storm refusing to break, his anger held firm against all reason."
+    },
+    "synonyms": ["defiant", "obstinate", "uncooperative", "stubborn", "rebellious"],
+    "antonyms": ["obedient", "compliant", "cooperative", "amenable", "submissive"],
+    "memory_hook": "Re-CALC-itrant: REfusing to CALCulate or cooperate with your plans!",
+    "root": "Latin 'recalcitrare' (to kick back) from 're' (back) + 'calcitrare' (to kick)"
+  },
+  {
+    "word": "sanguine",
+    "pronunciation": "SANG-gwin",
+    "part_of_speech": "adjective",
+    "meaning": "Optimistic or positive, especially in an apparently bad or difficult situation",
+    "examples": {
+      "casual": "Despite failing twice, she remained sanguine about passing the exam eventually.",
+      "formal": "Investors maintained a sanguine outlook on the market despite recent volatility.",
+      "dramatic": "With sanguine hope burning eternal, he faced each dawn as a new chance for redemption."
+    },
+    "synonyms": ["optimistic", "hopeful", "positive", "cheerful", "confident"],
+    "antonyms": ["pessimistic", "gloomy", "hopeless", "negative", "cynical"],
+    "memory_hook": "Sanguine = 'Sang-win': So optimistic you SING about WINNING!",
+    "common_mistake": "Don't confuse with 'blood-red' (old meaning). Modern usage means optimistic.",
+    "root": "Latin 'sanguineus' (of blood)—medieval medicine associated blood with cheerfulness"
+  },
+  {
+    "word": "disparate",
+    "pronunciation": "DIS-per-it",
+    "part_of_speech": "adjective",
+    "meaning": "Essentially different in kind; not allowing comparison; containing or made up of fundamentally different elements",
+    "examples": {
+      "casual": "The team members had disparate skills, but they worked well together.",
+      "formal": "The report attempts to reconcile disparate data from multiple conflicting sources.",
+      "dramatic": "Two disparate souls, one of fire and one of ice, met in the twilight between worlds."
+    },
+    "synonyms": ["different", "dissimilar", "diverse", "distinct", "contrasting"],
+    "antonyms": ["similar", "alike", "comparable", "uniform", "homogeneous"],
+    "memory_hook": "Dis-SEPARATE: So different they're DIS-connected and SEPARATE!",
+    "common_mistake": "Don't confuse with 'desperate' (completely different word!).",
+    "root": "Latin 'disparatus' from 'dis' (apart) + 'parare' (to prepare/make equal)"
+  },
+  {
+    "word": "erudite",
+    "pronunciation": "ER-yoo-dyt",
+    "part_of_speech": "adjective",
+    "meaning": "Having or showing great knowledge or learning; scholarly",
+    "examples": {
+      "casual": "The professor's erudite answers impressed everyone in the audience.",
+      "formal": "Her erudite analysis of classical literature earned widespread academic acclaim.",
+      "dramatic": "An erudite sage dwelling in forgotten libraries, guardian of wisdom lost to time."
+    },
+    "synonyms": ["learned", "scholarly", "knowledgeable", "educated", "intellectual"],
+    "antonyms": ["ignorant", "uneducated", "unlearned", "illiterate", "uninformed"],
+    "memory_hook": "Erudite = 'E-RUDE-ite': NOT rude because so educated and refined!",
+    "root": "Latin 'eruditus' from 'e' (out of) + 'rudis' (rude/untrained)—polished out of roughness"
+  },
+  {
+    "word": "languid",
+    "pronunciation": "LANG-gwid",
+    "part_of_speech": "adjective",
+    "meaning": "Lacking energy or vitality; weak or faint from illness or fatigue; slow and relaxed",
+    "examples": {
+      "casual": "After the long hike, we spent a languid afternoon by the pool.",
+      "formal": "The economy showed languid growth throughout the second quarter.",
+      "dramatic": "She moved with languid grace, each gesture flowing like honey through summer air."
+    },
+    "synonyms": ["lethargic", "listless", "sluggish", "weak", "enervated"],
+    "antonyms": ["energetic", "vigorous", "active", "lively", "animated"],
+    "memory_hook": "Languid = 'LANG-gwid': LANGuishing and weak, no energy to speak!",
+    "root": "Latin 'languidus' from 'languere' (to be weak or faint)"
+  },
+  {
+    "word": "cacophony",
+    "pronunciation": "kuh-KOF-uh-nee",
+    "part_of_speech": "noun",
+    "meaning": "A harsh, discordant mixture of sounds; jarring noise",
+    "examples": {
+      "casual": "The cacophony of car horns during rush hour is unbearable.",
+      "formal": "The orchestra's warm-up created a cacophony before the concert began.",
+      "dramatic": "A cacophony of screams and sirens shattered the night, chaos rendered in sound."
+    },
+    "synonyms": ["discord", "dissonance", "noise", "din", "clamor"],
+    "antonyms": ["harmony", "melody", "euphony", "silence", "music"],
+    "memory_hook": "Caco-PHONY: PHONY bad sounds, CAW-CAW-ing ravens = cacophony!",
+    "root": "Greek 'kakos' (bad) + 'phone' (sound)"
+  },
+  {
+    "word": "incorrigible",
+    "pronunciation": "in-KOR-i-juh-buhl",
+    "part_of_speech": "adjective",
+    "meaning": "Not able to be corrected, improved, or reformed; persistently bad or disobedient",
+    "examples": {
+      "casual": "He's an incorrigible prankster—no amount of detention stops him.",
+      "formal": "The court deemed the defendant an incorrigible offender requiring maximum sentencing.",
+      "dramatic": "An incorrigible dreamer, she refused to abandon hope even as the world burned."
+    },
+    "synonyms": ["incurable", "unreformable", "hopeless", "irredeemable", "inveterate"],
+    "antonyms": ["reformable", "corrigible", "improvable", "redeemable", "salvageable"],
+    "memory_hook": "In-CORRIGIBLE: IN-capable of being CORRECTED, impossible to fix!",
+    "root": "Latin 'in' (not) + 'corrigere' (to correct)"
+  },
+  {
+    "word": "malleable",
+    "pronunciation": "MAL-ee-uh-buhl",
+    "part_of_speech": "adjective",
+    "meaning": "Able to be hammered or pressed into shape without breaking; easily influenced or pliable",
+    "examples": {
+      "casual": "Young minds are malleable—what they learn now shapes their future.",
+      "formal": "Gold is highly malleable, allowing it to be fashioned into intricate jewelry.",
+      "dramatic": "His malleable will bent to every strong personality, a reed in the storm of opinions."
+    },
+    "synonyms": ["pliable", "flexible", "adaptable", "moldable", "impressionable"],
+    "antonyms": ["rigid", "inflexible", "stubborn", "brittle", "unyielding"],
+    "memory_hook": "Mall-ABLE: ABLE to be shaped at the MALL—flexible like Play-Doh!",
+    "root": "Latin 'malleare' (to hammer) from 'malleus' (hammer)"
+  },
+  {
+    "word": "abstemious",
+    "pronunciation": "ab-STEE-mee-uhs",
+    "part_of_speech": "adjective",
+    "meaning": "Marked by restraint, especially in eating and drinking; moderate or sparing",
+    "examples": {
+      "casual": "Despite the buffet, she was abstemious, eating only small portions.",
+      "formal": "The monk's abstemious lifestyle reflected his spiritual dedication and self-discipline.",
+      "dramatic": "An abstemious life in the mountains, sustained by bread and water, freed his mind."
+    },
+    "synonyms": ["temperate", "moderate", "restrained", "self-denying", "austere"],
+    "antonyms": ["gluttonous", "excessive", "indulgent", "immoderate", "greedy"],
+    "memory_hook": "Ab-STEEM-ious: AB-staining from STEAM-ing food, eating moderately!",
+    "root": "Latin 'abstemius' from 'abs' (away from) + 'temetum' (intoxicating drink)"
+  },
+  {
+    "word": "perfunctory",
+    "pronunciation": "per-FUNGK-tuh-ree",
+    "part_of_speech": "adjective",
+    "meaning": "Carried out with minimum effort or reflection; done merely as a duty without care",
+    "examples": {
+      "casual": "He gave me a perfunctory apology that clearly wasn't sincere.",
+      "formal": "The inspector's perfunctory examination missed several critical safety violations.",
+      "dramatic": "A perfunctory kiss on the cheek, devoid of warmth, marked the end of their love."
+    },
+    "synonyms": ["cursory", "superficial", "hasty", "mechanical", "routine"],
+    "antonyms": ["thorough", "careful", "attentive", "diligent", "meticulous"],
+    "memory_hook": "Per-FUNK-tory: Doing something in a FUNK, carelessly and mechanically!",
+    "root": "Latin 'perfungi' (to get through with) from 'per' (through) + 'fungi' (perform)"
+  },
+  {
+    "word": "ebullient",
+    "pronunciation": "ih-BUL-yuhnt",
+    "part_of_speech": "adjective",
+    "meaning": "Cheerful and full of energy; bubbling over with enthusiasm or excitement",
+    "examples": {
+      "casual": "She was ebullient after hearing she got into her dream college!",
+      "formal": "The candidate's ebullient campaign style energized voters across the state.",
+      "dramatic": "With ebullient joy exploding from every pore, he danced through the streets."
+    },
+    "synonyms": ["exuberant", "enthusiastic", "effervescent", "buoyant", "vivacious"],
+    "antonyms": ["gloomy", "depressed", "subdued", "lethargic", "melancholic"],
+    "memory_hook": "Ebullient = 'E-BOIL-ient': So excited you're BOILING over with energy!",
+    "root": "Latin 'ebullire' (to boil over) from 'e' (out) + 'bullire' (to boil)"
+  },
+  {
+    "word": "dichotomy",
+    "pronunciation": "dy-KOT-uh-mee",
+    "part_of_speech": "noun",
+    "meaning": "A division or contrast between two things that are represented as being opposed or entirely different",
+    "examples": {
+      "casual": "There's a dichotomy between what he says and what he actually does.",
+      "formal": "The dichotomy between urban and rural voting patterns has shaped recent elections.",
+      "dramatic": "A stark dichotomy: light and shadow, good and evil, locked in eternal combat."
+    },
+    "synonyms": ["division", "split", "contrast", "polarity", "opposition"],
+    "antonyms": ["unity", "agreement", "similarity", "congruence", "harmony"],
+    "memory_hook": "Di-CHOTOMY: DI (two) + cut-otomy (like lobotomy): Split into TWO parts!",
+    "root": "Greek 'dikho' (in two) + 'temnein' (to cut)"
+  },
+  {
+    "word": "gregarious",
+    "pronunciation": "grih-GAIR-ee-uhs",
+    "part_of_speech": "adjective",
+    "meaning": "Fond of company; sociable; living in flocks or groups",
+    "examples": {
+      "casual": "My gregarious roommate knows everyone in the building within a week.",
+      "formal": "Humans are fundamentally gregarious creatures, thriving in social environments.",
+      "dramatic": "A gregarious soul trapped in solitude, she withered like a flower without sun."
+    },
+    "synonyms": ["sociable", "outgoing", "friendly", "companionable", "extroverted"],
+    "antonyms": ["antisocial", "solitary", "introverted", "reclusive", "withdrawn"],
+    "memory_hook": "Gregarious = 'GREG-arious': GREG loves being around people, very sociable!",
+    "root": "Latin 'gregarius' from 'grex' (flock, herd)"
+  },
+  {
+    "word": "hackneyed",
+    "pronunciation": "HAK-need",
+    "part_of_speech": "adjective",
+    "meaning": "Lacking significance through overuse; unoriginal and trite",
+    "examples": {
+      "casual": "The movie's plot was so hackneyed—I predicted every twist.",
+      "formal": "The speech was filled with hackneyed phrases that failed to inspire the audience.",
+      "dramatic": "His hackneyed declarations of love rang hollow, words worn smooth by a thousand tongues."
+    },
+    "synonyms": ["clichéd", "trite", "banal", "overused", "stale"],
+    "antonyms": ["original", "fresh", "novel", "innovative", "unique"],
+    "memory_hook": "Hackneyed = 'HACK-kneed': So overused it's been HACKED to pieces, worn at the knees!",
+    "root": "From 'hackney' (a horse for hire)—used so much it became ordinary"
+  },
+  {
+    "word": "impetuous",
+    "pronunciation": "im-PECH-oo-uhs",
+    "part_of_speech": "adjective",
+    "meaning": "Acting or done quickly without thought or care; impulsive and passionate",
+    "examples": {
+      "casual": "His impetuous decision to quit his job without a backup plan was risky.",
+      "formal": "The general's impetuous attack, launched without reconnaissance, ended in disaster.",
+      "dramatic": "With impetuous fury, she threw the ring into the sea, consequences be damned."
+    },
+    "synonyms": ["impulsive", "rash", "hasty", "reckless", "spontaneous"],
+    "antonyms": ["cautious", "deliberate", "careful", "prudent", "thoughtful"],
+    "memory_hook": "Im-PET-uous: Like an excited PET rushing forward without thinking!",
+    "root": "Latin 'impetuosus' from 'impetus' (attack, force)"
+  },
+  {
+    "word": "loquacious",
+    "pronunciation": "loh-KWAY-shuhs",
+    "part_of_speech": "adjective",
+    "meaning": "Tending to talk a great deal; talkative and chatty",
+    "examples": {
+      "casual": "My loquacious neighbor can talk for hours about anything and everything.",
+      "formal": "The loquacious witness provided extensive testimony spanning three days.",
+      "dramatic": "A loquacious parrot in a silent monastery, his words filled the sacred emptiness."
+    },
+    "synonyms": ["talkative", "garrulous", "chatty", "verbose", "voluble"],
+    "antonyms": ["taciturn", "quiet", "reticent", "reserved", "laconic"],
+    "memory_hook": "Lo-QUACIOUS: Like a QUACKING duck that never stops talking!",
+    "root": "Latin 'loquax' from 'loqui' (to speak)"
+  },
+  {
+    "word": "meticulous",
+    "pronunciation": "muh-TIK-yuh-luhs",
+    "part_of_speech": "adjective",
+    "meaning": "Showing great attention to detail; very careful and precise",
+    "examples": {
+      "casual": "She's meticulous about keeping her workspace organized and clean.",
+      "formal": "The architect's meticulous plans accounted for every structural requirement.",
+      "dramatic": "With meticulous precision, the assassin prepared, each tool placed exactly so."
+    },
+    "synonyms": ["careful", "thorough", "precise", "scrupulous", "painstaking"],
+    "antonyms": ["careless", "sloppy", "negligent", "hasty", "imprecise"],
+    "memory_hook": "Me-TIC-ulous: So careful about every TIC and detail, nothing missed!",
+    "root": "Latin 'meticulosus' from 'metus' (fear)—originally meant 'fearful' of making mistakes"
+  },
+  {
+    "word": "nostalgia",
+    "pronunciation": "no-STAL-juh",
+    "part_of_speech": "noun",
+    "meaning": "A sentimental longing or wistful affection for the past, typically for a period with happy personal associations",
+    "examples": {
+      "casual": "Looking at old photos fills me with nostalgia for my childhood.",
+      "formal": "The museum exhibit evokes nostalgia for the cultural milieu of the 1960s.",
+      "dramatic": "Nostalgia gripped her heart, a sweet ache for days that would never return."
+    },
+    "synonyms": ["longing", "wistfulness", "reminiscence", "homesickness", "yearning"],
+    "antonyms": ["anticipation", "hope", "present-focus", "forward-looking"],
+    "memory_hook": "Nost-ALGIA: ALGIA means pain—the PAIN of missing the past!",
+    "root": "Greek 'nostos' (homecoming) + 'algos' (pain)—the pain of not being able to return home"
+  },
+  {
+    "word": "obfuscate",
+    "pronunciation": "OB-fuh-skayt",
+    "part_of_speech": "verb",
+    "meaning": "To render obscure, unclear, or unintelligible; to confuse or bewilder",
+    "examples": {
+      "casual": "Stop trying to obfuscate the issue—just give me a straight answer!",
+      "formal": "The company attempted to obfuscate the data to avoid regulatory scrutiny.",
+      "dramatic": "With clever words, he sought to obfuscate the truth, wrapping lies in linguistic fog."
+    },
+    "synonyms": ["confuse", "obscure", "muddle", "cloud", "mystify"],
+    "antonyms": ["clarify", "explain", "illuminate", "elucidate", "simplify"],
+    "memory_hook": "Ob-FUS-cate: Make things FUSsy and confusing on purpose!",
+    "root": "Latin 'obfuscare' from 'ob' (over) + 'fuscare' (to darken)"
+  },
+  {
+    "word": "paradigm",
+    "pronunciation": "PAIR-uh-dym",
+    "part_of_speech": "noun",
+    "meaning": "A typical example or pattern; a worldview underlying theories and methodology",
+    "examples": {
+      "casual": "The smartphone completely changed the paradigm of how we communicate.",
+      "formal": "Einstein's theory represented a paradigm shift in our understanding of physics.",
+      "dramatic": "The old paradigm shattered like glass, revealing a new reality beneath the illusion."
+    },
+    "synonyms": ["model", "pattern", "archetype", "standard", "framework"],
+    "antonyms": ["anomaly", "exception", "deviation", "irregularity"],
+    "memory_hook": "PARA-dime: Like a PARALLEL universe DIME—an example pattern to follow!",
+    "root": "Greek 'paradeigma' (pattern) from 'para' (beside) + 'deiknynai' (to show)"
+  },
+  {
+    "word": "quixotic",
+    "pronunciation": "kwik-SOT-ik",
+    "part_of_speech": "adjective",
+    "meaning": "Exceedingly idealistic; unrealistic and impractical; romantic in a foolish or extravagant way",
+    "examples": {
+      "casual": "His quixotic plan to save the world through interpretive dance was... ambitious.",
+      "formal": "The senator's quixotic campaign against corporate influence proved futile.",
+      "dramatic": "A quixotic knight tilting at windmills, fighting battles that existed only in his mind."
+    },
+    "synonyms": ["idealistic", "impractical", "unrealistic", "romantic", "fanciful"],
+    "antonyms": ["practical", "realistic", "pragmatic", "sensible", "down-to-earth"],
+    "memory_hook": "From Don Quixote—the delusional knight fighting windmills thinking they're giants!",
+    "root": "From 'Don Quixote,' the Miguel de Cervantes character known for impractical idealism"
+  },
+  {
+    "word": "reticent",
+    "pronunciation": "RET-uh-suhnt",
+    "part_of_speech": "adjective",
+    "meaning": "Not revealing one's thoughts or feelings readily; reserved and restrained",
+    "examples": {
+      "casual": "He's reticent about his personal life—never shares anything private.",
+      "formal": "The witness remained reticent, answering questions with minimal detail.",
+      "dramatic": "Reticent as stone, she guarded her secrets behind walls no word could breach."
+    },
+    "synonyms": ["reserved", "taciturn", "uncommunicative", "quiet", "secretive"],
+    "antonyms": ["forthcoming", "open", "frank", "communicative", "talkative"],
+    "memory_hook": "Reticent = RE-TIGHT-sent: Lips held RE-ally TIGHT, not speaking!",
+    "common_mistake": "Don't confuse with 'reluctant' (unwilling). Reticent specifically means unwilling to SPEAK.",
+    "root": "Latin 'reticere' from 're' (intensive) + 'tacere' (to be silent)"
+  },
+  {
+    "word": "scrutinize",
+    "pronunciation": "SKROOT-n-yz",
+    "part_of_speech": "verb",
+    "meaning": "To examine or inspect closely and thoroughly; to look at critically",
+    "examples": {
+      "casual": "I scrutinized the contract before signing to make sure there were no hidden fees.",
+      "formal": "Auditors will scrutinize the financial records for any irregularities.",
+      "dramatic": "She scrutinized his face, searching for any flicker of the lie she suspected."
+    },
+    "synonyms": ["examine", "inspect", "study", "investigate", "analyze"],
+    "antonyms": ["ignore", "overlook", "neglect", "glance", "skim"],
+    "memory_hook": "SCRUTIN-ize: Put something under SCRUTINY, examining with your EYES!",
+    "root": "Latin 'scrutari' (to search) from 'scruta' (trash)—originally meant searching through trash"
+  },
+  {
+    "word": "truculent",
+    "pronunciation": "TRUK-yuh-luhnt",
+    "part_of_speech": "adjective",
+    "meaning": "Eager or quick to argue or fight; aggressively defiant",
+    "examples": {
+      "casual": "The customer's truculent attitude made the manager call security.",
+      "formal": "The defendant's truculent behavior in court worked against his case.",
+      "dramatic": "With truculent eyes blazing defiance, the prisoner spat at his captors' feet."
+    },
+    "synonyms": ["aggressive", "belligerent", "hostile", "pugnacious", "combative"],
+    "antonyms": ["peaceful", "gentle", "cooperative", "agreeable", "amiable"],
+    "memory_hook": "TRUCulent: Like an angry TRUCK driver ready to fight in road rage!",
+    "root": "Latin 'truculentus' from 'trux' (fierce, savage)"
+  },
+  {
+    "word": "ubiquitous",
+    "pronunciation": "yoo-BIK-wi-tuhs",
+    "part_of_speech": "adjective",
+    "meaning": "Present, appearing, or found everywhere at the same time; widespread",
+    "examples": {
+      "casual": "Social media has become ubiquitous—everyone's on at least one platform.",
+      "formal": "The ubiquitous nature of surveillance technology raises ethical questions.",
+      "dramatic": "Death, that ubiquitous shadow, lurked in every corner of the war-torn city."
+    },
+    "synonyms": ["omnipresent", "pervasive", "universal", "everywhere", "widespread"],
+    "antonyms": ["rare", "scarce", "uncommon", "limited", "localized"],
+    "memory_hook": "U-BIK-witous: YOU can BIKE anywhere and find it—it's everywhere!",
+    "root": "Latin 'ubique' (everywhere) from 'ubi' (where)"
+  },
+  {
+    "word": "vacillate",
+    "pronunciation": "VAS-uh-layt",
+    "part_of_speech": "verb",
+    "meaning": "To waver between different opinions or actions; to be indecisive",
+    "examples": {
+      "casual": "Stop vacillating and just pick a restaurant—I'm starving!",
+      "formal": "The committee vacillated for months before reaching a decision.",
+      "dramatic": "He vacillated on the precipice of choice, unable to leap toward either destiny."
+    },
+    "synonyms": ["waver", "fluctuate", "hesitate", "oscillate", "dither"],
+    "antonyms": ["decide", "resolve", "determine", "commit", "settle"],
+    "memory_hook": "VACillate: Like a VACuum swinging back and forth, can't decide which direction!",
+    "root": "Latin 'vacillare' (to sway, waver)"
+  },
+  {
+    "word": "wistful",
+    "pronunciation": "WIST-fuhl",
+    "part_of_speech": "adjective",
+    "meaning": "Having or showing a feeling of vague or regretful longing; pensively sad",
+    "examples": {
+      "casual": "She gave a wistful sigh when talking about her college days.",
+      "formal": "The memoir captures the author's wistful reflections on childhood innocence.",
+      "dramatic": "With wistful eyes gazing toward the horizon, she mourned the life she might have lived."
+    },
+    "synonyms": ["yearning", "longing", "nostalgic", "pensive", "melancholic"],
+    "antonyms": ["content", "satisfied", "happy", "unregretful", "fulfilled"],
+    "memory_hook": "WIST-ful: WISH-ful thinking about the past, full of wishes and longing!",
+    "root": "From obsolete 'wistly' (intently) influenced by 'wishful'"
+  },
+  {
+    "word": "zealous",
+    "pronunciation": "ZEL-uhs",
+    "part_of_speech": "adjective",
+    "meaning": "Having or showing great energy or enthusiasm in pursuit of a cause or objective",
+    "examples": {
+      "casual": "She's a zealous fan—she has every piece of merchandise and goes to every concert.",
+      "formal": "The zealous prosecutor pursued the case with unwavering determination.",
+      "dramatic": "With zealous fire burning in his soul, the reformer rallied thousands to his cause."
+    },
+    "synonyms": ["enthusiastic", "fervent", "passionate", "ardent", "devoted"],
+    "antonyms": ["apathetic", "indifferent", "lukewarm", "halfhearted", "unenthusiastic"],
+    "memory_hook": "ZEAL-ous: Full of ZEAL and enthusiasm, like a zebra running with energy!",
+    "root": "Greek 'zelos' (zeal, ardor)"
+  }
+]
