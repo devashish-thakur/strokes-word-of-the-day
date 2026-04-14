@@ -5,8 +5,8 @@
 # 
 # This script:
 # 1. Implements lock file mechanism to prevent duplicate executions
-# 2. Opens Terminal.app programmatically
-# 3. Executes the Python CLI tool
+# 2. Generates HTML page with word
+# 3. Opens in default browser
 # 4. Logs execution for debugging
 ###############################################################################
 
@@ -14,7 +14,8 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LOCK_FILE="/tmp/wordoftheday.lock"
 LOG_FILE="/tmp/wordoftheday.log"
-PYTHON_SCRIPT="${SCRIPT_DIR}/main.py"
+PYTHON_SCRIPT="${SCRIPT_DIR}/main_html.py"
+HTML_OUTPUT="${SCRIPT_DIR}/wordoftheday.html"
 COOLDOWN_SECONDS=3  # 3 second cooldown only to prevent rapid duplicates
 
 # Get Python path - use system Python to avoid pyenv lock issues
@@ -29,7 +30,7 @@ log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> "$LOG_FILE"
 }
 
-# Simple cooldown check - only show once per hour
+# Simple cooldown check
 if [ -f "$LOCK_FILE" ]; then
     LOCK_TIME=$(cat "$LOCK_FILE" 2>/dev/null || echo "0")
     CURRENT_TIME=$(date +%s)
@@ -43,7 +44,7 @@ fi
 
 # Acquire lock
 date +%s > "$LOCK_FILE"
-log "Lock acquired, launching Word of the Day..."
+log "Lock acquired, generating Word of the Day HTML..."
 
 # Check if Python script exists
 if [ ! -f "$PYTHON_SCRIPT" ]; then
@@ -51,29 +52,23 @@ if [ ! -f "$PYTHON_SCRIPT" ]; then
     exit 1
 fi
 
-# Open Terminal and run the Python script
-# Using osascript to programmatically open Terminal and execute command
-osascript <<EOF
-tell application "Terminal"
-    set newTab to do script "cd \"${SCRIPT_DIR}\" && ${PYTHON_BIN} main.py; echo ''; echo 'Press Enter to close...'; read; exit"
-    activate
-    repeat
-        delay 0.5
-        if not busy of newTab then
-            close (window 1 whose tabs contains newTab)
-            exit repeat
-        end if
-    end repeat
-end tell
-EOF
+# Generate HTML
+cd "$SCRIPT_DIR"
+"$PYTHON_BIN" main_html.py >> /tmp/wordoftheday_output.log 2>&1
 
 if [ $? -eq 0 ]; then
-    log "Terminal opened successfully with Word of the Day"
-    # Also log to file for reference
-    cd "$SCRIPT_DIR"
-    "$PYTHON_BIN" main.py >> /tmp/wordoftheday_output.log 2>&1
+    log "HTML generated successfully"
 else
-    log "ERROR: Failed to open Terminal"
+    log "ERROR: Failed to generate HTML"
+    exit 1
+fi
+
+# Open in default browser
+if [ -f "$HTML_OUTPUT" ]; then
+    open "$HTML_OUTPUT"
+    log "Browser opened with Word of the Day"
+else
+    log "ERROR: HTML file not found at $HTML_OUTPUT"
     exit 1
 fi
 

@@ -1,15 +1,16 @@
-# Word of the Day - macOS Wake Trigger CLI
+# Word of the Day - macOS Wake Trigger
 
-A production-quality CLI tool that automatically displays a "Word of the Day" whenever your Mac wakes from sleep. Designed for daily habit formation with minimal friction.
+A production-quality tool that automatically displays a beautiful "Word of the Day" in your browser whenever your Mac wakes from sleep. Designed for daily habit formation with minimal friction.
 
 ## Features
 
 - **Automatic Wake Detection**: Launches when you open your laptop lid
+- **Beautiful HTML Display**: Modern, responsive design with smooth animations
 - **Daily Persistence**: Same word all day, refreshes at midnight
 - **Fast Execution**: <2 seconds from wake to display
 - **Rich Content**: Each word includes pronunciation, meanings, examples, synonyms, antonyms, memory hooks
 - **Streak Tracking**: Motivational streak counter for daily engagement
-- **No Duplicates**: Intelligent lock mechanism prevents multiple windows
+- **No Duplicates**: Intelligent lock mechanism prevents multiple tabs
 - **50+ Words**: Curated vocabulary database with rich metadata
 
 ## Architecture
@@ -23,31 +24,33 @@ Wrapper Script (launch_word_of_day.sh)
     ↓
 Lock File Check (/tmp/wordoftheday.lock)
     ↓
-Terminal.app Opens
+Python Generator (main_html.py)
     ↓
-Python CLI (main.py)
+HTML File Created (wordoftheday.html)
     ↓
-Word Display with Streak
+Default Browser Opens with Beautiful Display
 ```
 
 ## Requirements
 
 - macOS 10.15+ (tested on macOS 15.4)
 - Python 3.7+ (tested with Python 3.12.0)
-- Terminal.app with automation permissions
+- Default web browser (Safari, Chrome, Firefox, etc.)
 
 ## Project Structure
 
 ```
 strokes/
-├── main.py                 # Entry point
-├── display.py              # Rich formatting
+├── main_html.py            # Entry point
+├── generate_html.py        # HTML/CSS generation
 ├── word_selector.py        # Daily word selection
 ├── state_manager.py        # Persistent state
 ├── data_loader.py          # JSON data handling
 ├── words.json              # 50+ word database
 ├── state.json              # Auto-generated state
+├── wordoftheday.html       # Generated HTML page
 ├── launch_word_of_day.sh   # Wrapper script
+├── wake_daemon.py          # Wake detection daemon
 ├── setup/
 │   └── com.wordoftheday.wake.plist  # LaunchAgent config
 └── README.md
@@ -67,20 +70,14 @@ cp setup/com.wordoftheday.wake.plist ~/Library/LaunchAgents/
 launchctl load ~/Library/LaunchAgents/com.wordoftheday.wake.plist
 ```
 
-### Step 3: Grant Terminal Automation Permissions
-
-1. Go to **System Settings** > **Privacy & Security** > **Automation**
-2. Find **Terminal** in the list
-3. Enable permissions for Terminal to control other applications
-
-### Step 4: Test the Installation
+### Step 3: Test the Installation
 
 ```bash
 # Run manually to verify everything works
 ./launch_word_of_day.sh
 ```
 
-You should see a Terminal window open with your Word of the Day!
+You should see your browser open with a beautiful Word of the Day page!
 
 ## Usage
 
@@ -89,7 +86,7 @@ You should see a Terminal window open with your Word of the Day!
 Once installed, the system runs automatically:
 
 1. **Open your laptop lid** (wake from sleep)
-2. Within 5-10 seconds, Terminal opens with your Word of the Day
+2. Within 2-5 seconds, your browser opens with a beautiful Word of the Day page
 3. The same word persists throughout the day
 4. Tomorrow, you'll see a new word
 
@@ -98,11 +95,12 @@ Once installed, the system runs automatically:
 You can also run the tool manually anytime:
 
 ```bash
-# Option 1: Run via wrapper script (opens new Terminal)
+# Show today's word in browser
 ./launch_word_of_day.sh
 
-# Option 2: Run Python directly (current terminal)
-python3 main.py
+# Or generate HTML only
+python3 main_html.py
+open wordoftheday.html
 ```
 
 ## How It Works

@@ -32,8 +32,13 @@ if [ ! -f "$SCRIPT_DIR/launch_word_of_day.sh" ]; then
     exit 1
 fi
 
-if [ ! -f "$SCRIPT_DIR/main.py" ]; then
-    echo "✗ Error: main.py not found"
+if [ ! -f "$SCRIPT_DIR/main_html.py" ]; then
+    echo "✗ Error: main_html.py not found"
+    exit 1
+fi
+
+if [ ! -f "$SCRIPT_DIR/generate_html.py" ]; then
+    echo "✗ Error: generate_html.py not found"
     exit 1
 fi
 
@@ -42,7 +47,9 @@ echo "✓ All required files present"
 # Step 2: Ensure scripts are executable
 echo "→ Setting executable permissions..."
 chmod +x "$SCRIPT_DIR/launch_word_of_day.sh"
-chmod +x "$SCRIPT_DIR/main.py"
+chmod +x "$SCRIPT_DIR/main_html.py"
+chmod +x "$SCRIPT_DIR/wake_daemon.py"
+chmod +x "$SCRIPT_DIR/install.sh"
 echo "✓ Permissions set"
 
 # Step 3: Unload existing LaunchAgent if present
@@ -96,5 +103,5 @@ echo "   launchctl unload ~/Library/LaunchAgents/$PLIST_FILE"
 echo "   rm ~/Library/LaunchAgents/$PLIST_FILE"
 echo ""
 echo "✨ The system is now running! Close your laptop lid, wait 30 seconds,"
-echo "   then open it to see your Word of the Day! 🎉"
+echo "   then open it to see your Word of the Day in your browser! 🎉"
 echo ""
