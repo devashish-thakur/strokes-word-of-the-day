@@ -70,10 +70,36 @@ cp setup/com.wordoftheday.wake.plist ~/Library/LaunchAgents/
 launchctl load ~/Library/LaunchAgents/com.wordoftheday.wake.plist
 ```
 
-### Step 3: Test the Installation
+### Step 3: Grant Permissions (Important!)
+
+macOS requires permissions for the system to work properly.
+
+**Option A: Grant via System Prompts (Easiest)**
+
+1. Test the installation:
+   ```bash
+   ./launch_word_of_day.sh
+   ```
+
+2. Click **"Allow"** or **"OK"** on any macOS permission dialogs
+
+**Option B: Grant Manually**
+
+1. Open **System Settings** > **Privacy & Security**
+2. Add **Terminal.app** to **Full Disk Access**:
+   - Click Full Disk Access → + button
+   - Navigate to `/Applications/Utilities/Terminal.app`
+   - Toggle ON
+3. If needed, enable **Automation** → **Terminal** → [Your Browser]
+4. Restart Terminal completely
+
+### Step 4: Verify It Works
 
 ```bash
-# Run manually to verify everything works
+# Check everything is working
+./check_permissions.sh
+
+# Test manually
 ./launch_word_of_day.sh
 ```
 
